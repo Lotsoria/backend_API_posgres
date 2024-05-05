@@ -1,7 +1,6 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 import { AxiosResponse } from 'axios';
-import { send } from 'process';
 import { map, Observable } from 'rxjs';
 import { PrismaService } from 'src/prisma/prisma.service';
 
@@ -10,7 +9,7 @@ export class TicketsService {
   constructor(
     private prisma: PrismaService,
     private httpService: HttpService,
-  ) {} // Inyección del PrismaService
+  ) {}
 
   async getTickets() {
     try {
